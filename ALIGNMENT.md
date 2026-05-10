@@ -4,7 +4,7 @@
 
 This is the canonical reference. If anything in either product's working memory contradicts this doc, this doc wins until Richard explicitly updates it.
 
-Last updated: May 9, 2026 (v1.2 — persistence schema shipped + locked conventions).
+Last updated: May 9, 2026 (v1.3 — added explicit sync trigger phrases).
 
 ---
 
@@ -379,7 +379,11 @@ If you are a Claude chat in either Capex Scout's project or Portfolio Intelligen
 - Treat sections 3-9 as binding architecture. Do not propose changes to the boundary between core and surfaces without flagging it as a deviation.
 - Treat section 5b as the canonical persistence schema. Surface-specific code never reads/writes raw SQL against core tables — always through a store layer.
 - Treat section 10 as known-unknowns. Do not invent answers; ask Richard.
-- When Richard says "sync from alignment doc" or similar, re-read this in full before responding.
+- When Richard says any of these phrases, fetch this doc and re-read in full before responding:
+  - `sync pi<>capex`
+  - `align pi-cap`
+  - `sync from alignment doc`
+  - `re-read alignment`
 - When you make a change in either product that affects the boundary (a new signal kind, a renamed agent, a changed scoring weight, a new persisted column), flag it and recommend updating this doc.
 
 End of alignment doc.
